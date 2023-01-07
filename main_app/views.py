@@ -121,12 +121,12 @@ def add_prescription(request, user_id):
     url = f'https://clinicaltables.nlm.nih.gov/api/rxterms/v3/search?terms={terms}&ef=DISPLAY_NAME,STRENGTHS_AND_FORMS'
     response = requests.get(url)
     data = response.json()
-
+    form = PrescriptionForm(request.POST)
     context = {
         # 'prescriptionName' : data[2]['DISPLAY_NAME'][0],
         # 'prescriptionStrength': data[2]['STRENGTHS_AND_FORMS'][0][0]
     }
-    form = PrescriptionForm(request.POST)
+    
     
     if form.is_valid():
         new_prescription = form.save(commit=False)

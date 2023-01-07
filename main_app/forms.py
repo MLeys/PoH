@@ -34,6 +34,12 @@ class PrescriptionForm(ModelForm):
             "rows": 3
         }
     ))
+    notes = forms.CharField(widget=forms.Textarea(
+        attrs={
+            "rows": 3
+        }
+    ))
+    notes
     class Meta:
         model = Prescription
         fields = ['name', 'size', 'doctor', 'instructions', 'notes', 'prescribed']
