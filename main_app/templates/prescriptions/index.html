@@ -2,10 +2,16 @@
 
 {% block content %}
 
-<h1>{{ user.first_name }} {{ user.last_name }}'s medications</h1>
-<a class="btn btn-primary" href="{% url 'prescriptions_create' %}">Add Medication</a>
+<div class="row justify-content-around">
+  <div class="col-6 align-items-center">
+    <h1>{{ user.first_name }} {{ user.last_name }}'s Prescriptions</h1>
+  </div>
+  <div class="col-6">
+    <a class="btn btn-primary align-items-end" href="{% url 'prescriptions_create' %}">Add Medication</a>
+  </div>
 
-<br><br>
+</div>
+
 
 <hr>
 <link href='https://clinicaltables.nlm.nih.gov/autocomplete-lhc-versions/17.0.2/autocomplete-lhc.min.css' rel="stylesheet">
