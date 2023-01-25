@@ -371,6 +371,38 @@ rcssmin = "1.1.1"
 rjsmin = "1.2.1"
 
 [[package]]
+name = "django-appconf"
+version = "1.0.5"
+description = "A helper class for handling configuration defaults of packaged apps gracefully."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "django-appconf-1.0.5.tar.gz", hash = "sha256:be3db0be6c81fa84742000b89a81c016d70ae66a7ccb620cdef592b1f1a6aaa4"},
+    {file = "django_appconf-1.0.5-py3-none-any.whl", hash = "sha256:ae9f864ee1958c815a965ed63b3fba4874eec13de10236ba063a788f9a17389d"},
+]
+
+[package.dependencies]
+django = "*"
+
+[[package]]
+name = "django-compressor"
+version = "4.3"
+description = "Compresses linked and inline JavaScript or CSS into single cached files."
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "django_compressor-4.3-py2.py3-none-any.whl", hash = "sha256:9a1df0104b399a8fa9b6d64c8f14e5f1a49b7be95b8beabdc2950dce7b1e46d5"},
+    {file = "django_compressor-4.3.tar.gz", hash = "sha256:26da1f4141157dd5307a6f19b5a144039758375b89241be2354ff72a1633e285"},
+]
+
+[package.dependencies]
+django-appconf = ">=1.0.3"
+rcssmin = "1.1.1"
+rjsmin = "1.2.1"
+
+[[package]]
 name = "django-environ"
 version = "0.9.0"
 description = "A package that allows you to utilize 12factor inspired environment variables to configure your Django application."
@@ -978,4 +1010,4 @@ testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "a001aa29d26278b0eb7fe13209953925abd24ff90553123d3c3f07ef1c5a5a4f"
+content-hash = "af4ae6d30a7d38baa9d93dcb34b8f29965c79ff5d19dc983f8bd4f8609ed0079"
